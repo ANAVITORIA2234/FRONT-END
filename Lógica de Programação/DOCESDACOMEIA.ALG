@@ -4,6 +4,7 @@ Algoritmo "docesdacomeia"
 // QUANTIDADE DE UNIDADES- DOCINHO
 Var
 opcao : caractere
+valortotal: real
 
 Inicio
 escreval("********catalogo*********")
@@ -16,5 +17,28 @@ escreval("6-  CANCELAR")
 escreval("7-  CARRINHO")
 
 leia(opcao)
+// switch/ case
+escolha (opcao)
+  caso"1"
+  escreval ("Item TRUFA X 1 adicionado!")
+   valortotal <- valortotal + 8
+   escreval(" Valor total do carrinho R$ :" ,Valortotal)
+  caso "2"
+   escreval ("Item BOLO NO POTE X 1 adicionado!")
+   valortotal <- valortotal + 10
+   escreval(" Valor total do carrinho R$ :" ,Valortotal)
+  caso "3"
+  escreval ("Item COPO DA FELICIDADE X 1 adicionado!")
+   valortotal <- valortotal + 15
+   escreval(" Valor total do carrinho R$ :" ,Valortotal)
+  caso "4"
+   escreval ("Item DOCINHO X 1 adicionado!")
+   valortotal <- valortotal + 3
+   escreval(" Valor total do carrinho R$ :" ,Valortotal)
+  caso "5"
+   escreval ("Item PUDIM X 1 adicionado!")
+   valortotal <- valortotal + 25
+   escreval(" Valor total do carrinho R$ :" ,Valortotal)
+fimEscolha
 
 Fimalgoritmo
