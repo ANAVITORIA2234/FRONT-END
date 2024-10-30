@@ -3,7 +3,7 @@ Algoritmo "docesdacomeia"
 //DESCONTO (DESCONTO POR SITUAÇÃO)
 // QUANTIDADE DE UNIDADES- DOCINHO
 Var
-opcao : caractere
+opcao, finalizarCarrinho, opcaoFinalizar : caractere
 valortotal: real
 
 procedimento adicionadoCarrinho(vp  : real)
@@ -18,6 +18,8 @@ Inicio
 fimProcedimento
 //FIM ADICIONADOCARRINHO
 inicio
+finalizarCarrinho <- "n"
+enquanto (finalizarCarrinho = "n") faca
 escreval("********catalogo*********")
 escreval("1-  TRUFA                R$ 8.00 ")
 escreval("2-  BOLO NO POTE         R$ 10.00")
@@ -40,6 +42,27 @@ escolha (opcao)
     adicionadoCarrinho(3)
   caso "5"
      adicionadoCarrinho(25)
+     escreval("Compra cancelada!")
+     outrocaso
+     escreval("Opção invalida")
 fimEscolha
 
+   escreval("Deseja adicionar mais alguma coisa?")
+   escreval("1 - Sim")
+   escreval("2 - Não")
+   leia(opcaoFinalizar)
+   
+   se(opcaoFinalizar = "1")entao
+    finalizarCarrinho <- "n"
+    senao
+    finalizarCarrinho <- "S"
+    fimSe
+    limpatela()
+fimEnquanto
+
+escreval("------COMPRA FINALIZADA-------")
+escreval("Valor total : R$ ",ValorTotal)
+escreval("----------------------------")
+escreval ("N PEDIDO 1542")
+    
 Fimalgoritmo
