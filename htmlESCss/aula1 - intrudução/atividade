@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Texto em HTML</title>
+    <style>
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .aprendizados {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .aprendizados ul {
+            list-style-type: none;
+        }
+        .aprendizados li {
+            margin-bottom: 5px;
+        }
+        .strikethrough {
+            text-decoration: line-through;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MEU PRIMEIRO TEXTO EM HTML!</h1>
+    <p>Bom dia!, meu nome é:<b>Ana Vitória</b></p>
+    <p>Tenho tantos anos e quero cursar Front End!</p>
+
+    <div class="aprendizados">
+        <p>APRENDIZADOS</p>
+        <ul>
+            <li class="strikethrough">Internet</li>
+            <li class="strikethrough">Algoritmos</li>
+            <li class="highlight">HTML</li>
+            <li class="red">Css</li>
+            <li class="red">BootStrap</li>
+            <li class="red">Javascript</li>
+        </ul>
+    </div>
+
+</body>
+</html>
