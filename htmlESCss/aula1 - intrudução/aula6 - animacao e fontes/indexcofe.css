@@ -1,0 +1,15 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Sour Gummy", sans-serif;
+ }    
+
+nav{
+    width: 100%;
+    padding: 20px 0px;
+    background-color: rgb(197, 158, 91);
+}
+
+img{
+    width: 600px;
+}
