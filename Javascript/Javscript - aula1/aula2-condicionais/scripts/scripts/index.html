@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+        var primeiroValor =parseInt(prompt('Digite o primeiro valor:'));
+
+        do{
+            var operacao = prompt('Digite a operacao matematica:');
+        } while(operacao!= "+" && operacao!= "-" && operacao!= "/" && operacao!="*")
+
+        var segundoValor =parseInt(prompt('Digite o segundo valor:'));
+
+        switch(operacao){
+           case "+" :
+            resultado = primeiroValor+segundoValor;
+            alert(resultado)
+            break
+            case "-" :
+            resultado = primeiroValor-segundoValor;
+            alert(resultado)
+            break
+            case "/" :    
+            resultado = primeiroValor/segundoValor;
+            alert(resultado)
+            break
+            case "*" :
+            resultado = primeiroValor*segundoValor;
+            alert(resultado)
+            break
+           
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>
