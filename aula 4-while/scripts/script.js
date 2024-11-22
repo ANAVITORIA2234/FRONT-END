@@ -16,21 +16,32 @@ for (var i = 0;i <3;i++){
 // testes()
 
 function carregarCatalogo(){
-   for (let  i = 0;i < 10;i++){
+  var livros = [
+   ['images/para todos garotos que eu ja amei.jpg','para todos os garotos que eu ja amei'],
+   ['images/textoscrueis.jpg','textos crueis demais para serem lidos rapidamente'],
+   ['images/abarraca.jpg',' barraca do beijo'],
+   ['images/racionais.jpg',' racionais mcs']
+]
+
+
+
+
+   
+   livros.forEach(cadaLivro => {
    document.getElementById('catalogo').innerHTML += `
    
    <div class="livro">
-       <img src="images/para todos garotos que eu ja amei.jpg" alt="">
-       <h4>Para todos os garotos que eu ja amei</h4>
+       <img src="${cadaLivro[0]}" alt="">
+       <h4>${cadaLivro[1]}</h4>
        <button>
         Adicionar
-       
+       <img src="imagens/icons/mais.svg" alt=""></img>
 
        </button>
     </div>
    
    `
-   }
+   })
 
 
 }
