@@ -20,7 +20,9 @@ function testes(){
        ['images/filmes/ate_que_a_sorte.jpg','até que a sorte nos separe'],
        ['images/filmes/meupassado.jpg','meu passado me condena'],
        ['images/filmes/sintonia.jpg','sintomia de natal'],
-       ['images/racionais.jpg',' racionais mcs']
+       ['images/filmes/corra.webp','corra']
+       ['images/filmes/amordeluaguel.webp,','amor de aluguel']
+       ['images/filmes/opoço2.webp', 'o poço 2']
     ]
     
     
