@@ -21,5 +21,40 @@ nav{
 }
 
 img{
-    width: 600px;
+    width: 1500px;
 }
+
+.text-info {
+    color: #3a251b !important;
+  }
+
+
+  .h5 {
+    font-size: 1.25rem;
+  }
+
+  .produto{
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    background-position: center;
+  }
+
+  #produto1{
+    background-image: url('images/baiani-treetobar-65-cafesdobrasil-mokaclube.jpg');
+
+  }
+
+  #produto2{
+    background-image: url('images/baiani-treetobar-pingado-mokaclube.jpg');
+  }
+
+  #produto3{
+    background-image: url('images/baiani-vegan-milk-chocolate.webp');
+  }
+
+  #produto4{
+    background-image: url('images/baiani-passionfrut.jpg');
+  }
