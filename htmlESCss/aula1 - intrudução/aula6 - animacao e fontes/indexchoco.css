@@ -17,15 +17,16 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(197, 158, 91);
+    background-color: rgb(161, 160, 148);
 }
 
 img{
-    width: 1500px;
+    width: 900px;
+    
 }
 
 .text-info {
-    color: #3a251b !important;
+    color: #743316 !important;
   }
 
 
@@ -36,12 +37,33 @@ img{
   .produto{
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     background-size: cover;
-    width: 500px;
+    width: 1600px;
     height: 500px;
     background-position: center;
+    margin: 10px ;
+    font-size: medium;
+   
+    
   }
 
+ #logo{
+  width: 400px;
+
+ }
+
+ .logo{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  
+ }
+
+ .h1-white {
+  background-color: #f1dbdb !important;
+}
+  
   #produto1{
     background-image: url('images/baiani-treetobar-65-cafesdobrasil-mokaclube.jpg');
 
@@ -57,4 +79,33 @@ img{
 
   #produto4{
     background-image: url('images/baiani-passionfrut.jpg');
+  }
+
+  #img{
+  background-image: url(images/lojadecacau.webp);
+  background-size: cover;
+  height: 700px;
+  width: 700px;
+  background-position: bottom;
+}
+
+
+
+
+#baner{
+ width: 100%;
+ display: flex ;
+ justify-content: center;
+  }
+
+  #texto{
+    width: 90%;
+    font-size: 20pt;
+  }
+
+  #titulo{
+    height: 10px;
+   display: flex;
+   justify-content: center;
+   font-size: 20pt;
   }
