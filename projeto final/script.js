@@ -1,20 +1,26 @@
 lista_categorias = []
 
 class Categoria {
-    constructor(titulo,img,desc,marca){
+    constructor(titulo,img,marca){
     this.titulo = titulo
     this.img = img
-    this.desc = desc
     this.marca = marca
 
     }
 }
 
-lista_categorias.push(new Categoria("Drink com pimenta" , "images/kit argola.webp" , " Um drink vibrante que combina tequila, limão fresco e um toque de pimenta vermelha."))
-lista_categorias.push(new Categoria("Drink com uva", "images/kit argola.webp," ,))
-lista_categorias.push(new Categoria("Drink com abacaxi", "images/brinco verde.webp", "Um drink refrescante e exótico que traz o sabor vibrante do abacaxi em sua forma mais pura. "))
+lista_categorias.push(new Categoria("Kit trio argola lisa grossa" , "images/kit argola.webp" , "@Belíssimas"))
+lista_categorias.push(new Categoria("Brinco flor de cerejeira", "images/brinco.flor.png", "@Belíssimas"))
+lista_categorias.push(new Categoria("Brinco folheado", "images/brinco-folheado.png" ,"@Belíssimas"))
 
 
+lista_categorias.push(new Categoria("kit brinco cristal rosa" , "images/Android Compact - 1 (4).png" , "@Belíssimas"))
+lista_categorias.push(new Categoria("kit brinco gota azul claro", "images/img_7725-fescyb50iz 1.png", "@Belíssimas"))
+lista_categorias.push(new Categoria("Kit brinco gota ", "images/brinco6.png" ,"@Belíssimas"))
+
+lista_categorias.push(new Categoria("a vie est belle feminino eau de parfum 75ml" , "images/1perfume.png" , "@Belíssimas"))
+lista_categorias.push(new Categoria("Egeo Sweet Meli O Boticário 90ml Egeo melancia", "images/2perfume.png", "@Belíssimas"))
+lista_categorias.push(new Categoria("Floratta Cerejeira Em Flor Desodorante Colônia 75ml ", "images/3perfume (1).png","@Belíssimas"))
 
 
 
@@ -33,7 +39,6 @@ lista_categorias.forEach(categoria => {
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">${categoria.titulo}</h5>
-          <p class="card-text">${categoria.desc}</p>
           <p class="card-text"><small class="text-body-secondary">${categoria.marca}</small></p>
         </div>
       </div>
