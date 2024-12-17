@@ -18,12 +18,6 @@ lista_categorias.push(new Categoria("kit brinco cristal rosa" , "images/Android 
 lista_categorias.push(new Categoria("kit brinco gota azul claro", "images/img_7725-fescyb50iz 1.png", "@Belíssimas"))
 lista_categorias.push(new Categoria("Kit brinco gota ", "images/brinco6.png" ,"@Belíssimas"))
 
-lista_categorias.push(new Categoria("a vie est belle feminino eau de parfum 75ml" , "images/1perfume.png" , "@Belíssimas"))
-lista_categorias.push(new Categoria("Egeo Sweet Meli O Boticário 90ml Egeo melancia", "images/2perfume.png", "@Belíssimas"))
-lista_categorias.push(new Categoria("Floratta Cerejeira Em Flor Desodorante Colônia 75ml ", "images/3perfume (1).png","@Belíssimas"))
-
-
-
 
 lista_categorias.forEach(categoria => {
     document.querySelector('#categoriaItens').innerHTML += `
@@ -41,9 +35,14 @@ lista_categorias.forEach(categoria => {
           <h5 class="card-title">${categoria.titulo}</h5>
           <p class="card-text"><small class="text-body-secondary">${categoria.marca}</small></p>
         </div>
+        <button onclick="comprar('${categoria.titulo}')">COMPRAR</button>
       </div>
     </div>
   </div>
     
     `
 });
+
+function comprar(nomeProduto){
+  alert(`O produto ${nomeProduto} foi adicionado! `)
+}
