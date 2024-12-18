@@ -14,8 +14,8 @@ lista_categorias.push(new Categoria("Brinco flor de cerejeira", "images/brinco.f
 lista_categorias.push(new Categoria("Brinco folheado", "images/brinco-folheado.png" ,"@Belíssimas"))
 
 
-lista_categorias.push(new Categoria("kit brinco cristal rosa" , "images/Android Compact - 1 (4).png" , "@Belíssimas"))
-lista_categorias.push(new Categoria("kit brinco gota azul claro", "images/img_7725-fescyb50iz 1.png", "@Belíssimas"))
+lista_categorias.push(new Categoria("Kit brinco cristal rosa" , "images/Android Compact - 1 (4).png" , "@Belíssimas"))
+lista_categorias.push(new Categoria("Kit brinco gota azul claro", "images/img_7725-fescyb50iz 1.png", "@Belíssimas"))
 lista_categorias.push(new Categoria("Kit brinco gota ", "images/brinco6.png" ,"@Belíssimas"))
 
 
