@@ -1,0 +1,10 @@
+create database looks;
+use looks;
+create table clientes (nome VARCHAR(100),tamanho VARCHAR(3) , cor VARCHAR(100), preço DECIMAL(6.2));
+select * from clientes;
+insert into clientes (nome,tamanho,cor,preço) values ("calça jeans preta" , "P" , "azul", 38);
+insert into clientes (nome,tamanho,cor,preço) values ("blusa de ombro" , "M" , "branco", 55);
+insert into clientes (nome,tamanho,cor,preço) values ("short bermuda jeans " , "G" , "verde", 36);
+insert into clientes (nome,tamanho,cor,preço) values ("blusa de frio" , "único" , "marrom", 38);
+insert into clientes (nome,tamanho,cor,preço) values ("vestido midi" , "XL" , "vinho", 30);
+insert into clientes (nome,tamanho,cor,preço) values ("macaquinho academia" , "GG" , "cinza", 30);
