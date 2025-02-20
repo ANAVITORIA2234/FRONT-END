@@ -2,6 +2,12 @@ CREATE DATABASE JoinAula;
 
 USE JoinAula;
 
+CREATE TABLE pessoa(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(100),
+nacionalidade VARCHAR(5)
+);
+
 CREATE TABLE endereco(
 id INT PRIMARY KEY AUTO_INCREMENT,
 rua VARCHAR(255),
@@ -10,15 +16,10 @@ pessoa_id INT NULL,
 FOREIGN KEY (pessoa_id) REFERENCES pessoa(id)
 );
 
-CREATE TABLE pessoa(
-id INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(100),
-nacionalidade VARCHAR(5)
-);
 
 INSERT INTO pessoa (nome,nacionalidade) VALUES ("Ana","BR");
 INSERT INTO pessoa (nome,nacionalidade) VALUES ("Duarte","USA");
-INSERT INTO pessoa (rua,numero,pessoa_id) VALUES ("Recanto das Emas","Qd 509",1);
+INSERT INTO endereco (rua,numero,pessoa_id) VALUES ("Recanto das Emas","Qd 509",1);
 
 -- INTER (INTERSENÇÃO OU "COMUM NAS DUAS COLUNAS")
 SELECT pessoa.nome , endereco.rua FROM pessoa INNER JOIN endereco ON pessoa.id = endereco.id;
