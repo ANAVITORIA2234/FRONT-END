@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atualizar Livro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Atualizar Livro</h1>
+    <form id="formAtualizacao" action="#">
+      <label for="nome">Textos cruéis demais para serem lidos rapidamente – Onde dorme o amor</label>
+      <input type="text" id="nome" name="nome" value="Textos cruéis demais para serem lidos rapidamente – Onde dorme o amor" required>
+
+      <label for="imagem">URL da Imagem</label>
+      <input type="text" id="imagem" name="imagem" value="images/texto.jpg" required>
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" required>Uma coletânea de textos poéticos e reflexivos que exploram as dores, fragilidades e intensidades do amor e das relações humanas.</textarea>
+
+      <label for="avaliacao">Avaliação</label>
+      <input type="number" id="avaliacao" name="avaliacao" value="5" min="1" max="5" required>
+
+      <button type="submit" class="button">Atualizar Livro</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('formAtualizacao').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const imagem = document.getElementById('imagem').value;
+      const descricao = document.getElementById('descricao').value;
+      const avaliacao = document.getElementById('avaliacao').value;
+
+      const livroAtualizado = {
+        nome,
+        imagem,
+        descricao,
+        avaliacao
+      };
+
+      // Aqui você pode atualizar o livro no banco de dados ou em um arquivo JSON.
+      console.log(livroAtualizado);
+      alert('Livro atualizado com sucesso!');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "livros": [
+    {
+      "nome": "O Senhor dos Anéis",
+      "imagem": "url_da_imagem",
+      "descricao": "Uma história épica sobre a luta contra o mal.",
+      "avaliacao": 5
+    },
+    {
+      "nome": "Harry Potter e a Pedra Filosofal",
+      "imagem": "url_da_imagem",
+      "descricao": "Primeiro livro da série de Harry Potter, onde ele começa sua jornada.",
+      "avaliacao": 4
+    }
+  ]
+}

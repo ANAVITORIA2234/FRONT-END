@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Livro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastrar Novo Livro</h1>
+    <form id="formCadastro" action="#">
+      <label for="nome">Nome do Livro</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="imagem">URL da Imagem</label>
+      <input type="text" id="imagem" name="imagem" required>
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" required></textarea>
+
+      <label for="avaliacao">Avaliação</label>
+      <input type="number" id="avaliacao" name="avaliacao" min="1" max="5" required>
+
+      <button type="submit" class="button">Cadastrar Livro</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('formCadastro').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const imagem = document.getElementById('imagem').value;
+      const descricao = document.getElementById('descricao').value;
+      const avaliacao = document.getElementById('avaliacao').value;
+
+      const novoLivro = {
+        nome,
+        imagem,
+        descricao,
+        avaliacao
+      };
+
+      // Aqui você pode salvar esse livro em seu banco de dados ou em um arquivo JSON.
+      console.log(novoLivro);
+      alert('Livro cadastrado com sucesso!');
+    });
+  </script>
+</body>
+</html>

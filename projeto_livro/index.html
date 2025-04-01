@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Livros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Catálogo de Livros</h1>
+    <div class="livros-lista" id="livros-lista">
+      <!-- Livros serão carregados aqui -->
+    </div>
+    <a href="cadastro.html" class="button">Cadastrar Novo Livro</a>
+  </div>
+
+  <script>
+    // Simulando o banco de dados com JSON
+    const livros = [
+      {
+        nome: "Textos cruéis demais para serem lidos rapidamente – Onde dorme o amor",
+        imagem: "images/texto.jpg",
+        descricao: "Uma coletânea de textos poéticos e reflexivos que exploram as dores, fragilidades e intensidades do amor e das relações humanas.",
+        avaliacao: 5
+      },
+      {
+        nome: "A hora da estrela",
+        imagem: "images/clarice.jpg",
+        descricao: "Reflexão sobre a vida de Macabéa, uma jovem invisível e sem perspectivas, que busca sentido em meio à solidão e marginalização.",
+        avaliacao: 4
+      }
+    ];
+
+    const listaLivros = document.getElementById('livros-lista');
+
+    livros.forEach(livro => {
+      const livroDiv = document.createElement('div');
+      livroDiv.classList.add('livro');
+      livroDiv.innerHTML = `
+        <img src="${livro.imagem}" alt="${livro.nome}">
+        <h2>${livro.nome}</h2>
+        <p>${livro.descricao}</p>
+        <p>Avaliação: ${livro.avaliacao} estrelas</p>
+        <a href="atualizar.html" class="button">Atualizar</a>
+      `;
+      listaLivros.appendChild(livroDiv);
+    });
+  </script>
+</body>
+</html>
