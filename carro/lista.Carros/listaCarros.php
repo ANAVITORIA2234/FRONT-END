@@ -1,12 +1,12 @@
 <h1>VOCÊ ESTÁ NA LISTA DE CARROS</h1>
 
-<table>
+<table class="table">
 <tr>
-    <tr>Modelo</tr>
-    <tr>Marca</tr>
-    <tr>Valor</tr>
-    <tr>Ano</tr>
-    <tr>Cor</tr>
+    <td>Modelo</td>
+    <td>Marca</td>
+    <td>Valor</td>
+    <td>Ano</td>
+    <td>Cor</td>
 </tr>
 <?php
 $sql = "SELECT * FROM carros";
@@ -23,13 +23,9 @@ while($dados = mysqli_fetch_assoc($query)){
             <td><?=$dados['valorCarro'] ?></td>
             <td><?=$dados['anoCarro'] ?></td>
             <td><?=$dados['corCarro'] ?></td>
-            <td><a href="index.php?menu=editarCarro&idCarro=<?=$dados['corCarro'] ?>">EDITAR</a></td>
+            <td><a href="index.php?menu=editarCarro&idCarro=<?=$dados['idCarro'] ?>">EDITAR</a></td>
         </tr>
 
-
-
-
-</h>
 
 <?php
 
