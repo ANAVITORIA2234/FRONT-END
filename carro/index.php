@@ -32,11 +32,14 @@ include('db/conexao.php');
                 include("pages/home/home.php");
                 break;
             case 'lista':
-                include("pages/lista.Carros/listaCarros.php");
+                include("lista.Carros/listaCarros.php");
                 break;
             case 'default':
                 include("pages/home/home.php");
                 break;
+                case 'default':
+                    include("pages/lista.Carros/deletarCarro.php");
+                    break;
                 case 'default':
                     include("pages/home/home.php");
                     break;
