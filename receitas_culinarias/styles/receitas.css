@@ -1,0 +1,71 @@
+/* style.css */
+
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdcd4a;
+    color: #867d7d;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+/* Estilo da imagem */
+img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Parágrafos */
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Informações destacadas */
+p strong {
+    color: #555;
+}
+
+/* Subtítulos */
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Links ou botões (se você precisar adicionar no futuro) */
+a, button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+    background-color: #0056b3;
+}

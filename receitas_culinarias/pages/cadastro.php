@@ -1,7 +1,7 @@
 <?php
 // Conectar ao banco de dados
 $host = 'localhost';
-$dbname = 'receitasDB';
+$dbname = 'receitas_culinarias';
 $username = 'root';
 $password = '';
 $conn = new mysqli($host, $username, $password, $dbname);
@@ -16,16 +16,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $descricao = $_POST['descricao'];
     $receita_texto = $_POST['receita_texto'];
     $autor = $_POST['autor'];
-    $tipo_receita = $_POST['tipo_receita'];
+    $tipo_da_receita = $_POST['tipo_da_receita'];
     $imagem = $_FILES['imagem']['name'];
 
     // Salvar a imagem no diretório de uploads
     if ($imagem) {
-        move_uploaded_file($_FILES['imagem']['tmp_name'], 'uploads/' . $imagem);
+        move_uploaded_file($_FILES['imagem']['tmp_name'], '../image/' . $imagem);
     }
 
-    $sql = "INSERT INTO receitas (titulo, descricao, receita_texto, autor, tipo_receita, imagem)
-            VALUES ('$titulo', '$descricao', '$receita_texto', '$autor', '$tipo_receita', '$imagem')";
+    $sql = "INSERT INTO receitas (titulo, descricao, receita_texto, autor, tipo_da_receita, imagem)
+            VALUES ('$titulo', '$descricao', '$receita_texto', '$autor', '$tipo_da_receita', '$imagem')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Nova receita cadastrada com sucesso!";
@@ -37,14 +37,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Receita</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
 </head>
+
 <body>
     <div class="container">
+        <a href="../index.php">Voltar</a>
         <h1>Cadastrar Receita</h1>
         <form method="POST" enctype="multipart/form-data">
             <label for="titulo">Título:</label>
@@ -59,8 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="autor">Autor:</label>
             <input type="text" name="autor" id="autor" required>
 
-            <label for="tipo_receita">Tipo de Receita:</label>
-            <select name="tipo_receita" id="tipo_receita" required>
+            <label for="tipo_da_receita">Tipo de Receita:</label>
+            <select name="tipo_da_receita" id="tipo_da_receita" required>
                 <option value="Doce">Doce</option>
                 <option value="Salgado">Salgado</option>
                 <option value="Vegano">Vegano</option>
@@ -73,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
 </body>
+
 </html>
 
 <?php
