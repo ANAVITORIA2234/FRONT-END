@@ -1,20 +1,18 @@
- import './Header.css'
- import Logo from './../assets/Criativa.png'
-//  import produto1 from './../assets/produtos/produto1.png
+import produto1 from '../assets//Criativa.png';
 
- function Header() {
-    return(
+
+const Header = () => {
+    return (
         <>
-        <header className='w-full p-3 bg-sky-400 flex justify-between'>
+            <header>
+                <img src={produto1} alt="Logo da Papelaria Criativa" className="logo" />
+                <link href="index.css" rel="stylesheet" />
 
-<img  src={Logo} />
-<a href="#">HOME</a>
-        </header>
-    </>
 
+            </header>
+        </>
     );
 }
 
-export default Header
 
-    
+export default Header;

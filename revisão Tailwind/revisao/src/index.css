@@ -1,2 +1,82 @@
 @import "tailwindcss";
 
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0d9fa;
+    color: #333;
+}
+
+header {
+    background-color: #f0d9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #f0c040;
+}
+
+img {
+     height: 180px; 
+     width: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0c040;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #d780f1;
+    text-align: center;
+    padding: 15px;
+    color: #131112;
+}
+.produtos-list {
+    background-color: #af40f0; 
+    border: 2px solid #d780f1; 
+    padding: 9px;
+    margin: 20px auto;
+    max-width: 300px;
+    text-align: center;
+    font-weight: bold;
+    color: #131112;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.produtos-list.animate-click {
+    animation: pulse 0.4s forwards;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.produtos-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 69px;
+}
