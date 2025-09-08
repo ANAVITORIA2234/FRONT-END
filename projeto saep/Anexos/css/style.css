@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
-:root {
-    --SpecialFont: "Concert One";
-    --DefaultFont: "Roboto";
+:root{
+    --SpecialFont : "Concert One";
+    --DefaultFont : "Roboto";
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--DefaultFont);
 }
 
-header {
+header{
     width: 100vw;
     height: max-content;
 }
 
-header div {
+header div{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,12 +26,12 @@ header div {
     border-bottom: 2px solid #ddd;
 }
 
-header div h1 {
+header div h1{
     font-size: calc(0.8rem + 0.9vw);
     font-family: var(--SpecialFont);
 }
 
-header div button {
+header div button{
     width: 15%;
     padding: 15px;
     border-radius: 15px;
@@ -41,11 +42,11 @@ header div button {
     transition: 0.3s;
 }
 
-header div button:active {
+header div button:active{
     scale: 1.05;
 }
 
-header nav {
+header nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,101 +55,100 @@ header nav {
     border-bottom: 2px solid #ddd;
 }
 
-header nav ul li {
+header nav ul li{
     list-style: none;
     font-size: calc(0.6rem + 0.5vw);
-
 }
 
-a {
+a{
     color: black;
     text-decoration: none;
 }
 
-main {
+main{
     display: flex;
     justify-content: center;
     align-self: center;
     width: 100%;
 }
 
-.container {
+.container{
     width: 70%;
     padding: 5vh 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-template-areas:
-        "img1 img1 img2"
-        "img3 img4 img2"
-        "img5 img6 img6"
-        "img5 img7 img8";
+    grid-template-areas: 
+    "img1 img1 img2"
+    "img3 img4 img2"
+    "img5 img6 img6"
+    "img5 img7 img8";
     gap: 10px;
 }
 
-.container .item {
+.container .item{
     position: relative;
     overflow: hidden;
 }
 
-.container .item img {
+.container .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.container .item .interac {
+.container .item .interac{
     width: 120px;
     display: flex;
     padding: 10px 0;
     justify-content: space-around;
     align-items: center;
     background: #1e1e1e;
-    position: absolute;
+    position: absolute;  
     bottom: 0;
 }
 
-.container .interac .item span {
+.container .item .interac span{
     color: white;
 }
 
-.container .interac .item img {
+.container .item .interac img{
     width: 24px;
 }
 
-.img1 {
+.img1{
     grid-area: img1;
 }
 
-.img2 {
+.img2{
     grid-area: img2;
 }
 
-.img3 {
+.img3{
     grid-area: img3;
 }
 
-.img4 {
+.img4{
     grid-area: img4;
 }
 
-.img5 {
+.img5{
     grid-area: img5;
 }
 
-.img6 {
+.img6{
     grid-area: img6;
 }
 
-.img7 {
+.img7{
     grid-area: img7;
 }
 
-.img8 {
+.img8{
     grid-area: img8;
 }
 
-footer {
+footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -158,37 +158,38 @@ footer {
     color: white;
 }
 
-footer h1 {
+footer h1{
     font-size: calc(0.8rem + 0.8vw);
     font-family: var(--SpecialFont);
 }
 
-footer ul {
+footer ul{
     width: 25%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-footer ul li {
+footer ul li{
     list-style: none;
 }
 
-/*Configuração POPUP LOGIN*/
-.loginPopUp {
+/* Configuração Pop-Up Login */
+
+.loginPopUp{
     position: absolute;
-    display: block;
+    display: none;
     justify-content: center;
     align-items: center;
     top: 25%;
     z-index: 100;
     width: 35%;
     height: 40%;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(209, 209, 209);
     border-radius: 15px;
 }
 
-.loginPopUp form {
+.loginPopUp form{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -197,51 +198,170 @@ footer ul li {
     align-items: center;
 }
 
-.loginPopUp form .headerPop {
+.loginPopUp form .headerPop{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 15%;
-    border-bottom: 2px solid #ddd;
+    border-radius: 2px solid #ddd;
 }
-.loginPopUp form .headerPop h2 {
+
+.loginPopUp form .headerPop h2{
     font-weight: 400;
 }
 
-.logininPopUp form .inputsPop {
+.loginPopUp form .inputsPop{
     width: 100%;
-    padding: 60%;
+    height: 60%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.logininPopUp form .inputsPop input{
-   align-self: flex-start;
-   margin-left: 25;
-   border-radius: 6px;
-   margin-bottom: 2vh;
+.loginPopUp form .inputsPop label{
+    align-self: flex-start;
+    margin-left: 25%;
 }
 
-.loginPopUp inputsPop input {
+.loginPopUp form .inputsPop input{
     width: 50%;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 2vh;
+
 }
 
-.loginPopUp form .btnsPop {
+.loginPopUp form .btnsPop{
     width: 100%;
-    padding: 25%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: start;
 }
-.loginPopUp form .btnsPop button {
+
+.loginPopUp form .btnsPop button{
     width: 25%;
     margin: 0 0.5vw;
     padding: 15px 0;
-    font-size: calc(0.4rem + 0.4rem);
+    font-size: calc(0.4rem + 0.4vw);
     border-radius: 6px;
     cursor: pointer;
+}
+
+/* Pop-Up Comentários */
+
+.boxComment{
+    position: fixed;
+    display: none;
+    top: 25%;
+    z-index: 100;
+    width: 35%;
+    height: 50%;
+    background-color: rgb(209,209,209);
+    border-radius: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerComment h2{
+    font-size: calc(0.8rem + 0.8vw);
+    font-weight: 400;
+}
+
+.headerComment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.headerComment img{
+    width: 8%;
+    cursor: pointer;
+}
+
+.imgBox{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.basicInfos{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.basicInfos span{
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+.basicInfos .likeBox{
+    display: flex;
+    align-items: center;
+}
+
+.basicInfos img{
+    width: 30%;
+}
+
+.basicInfos .likeBox span{
+    margin: 0 5%;
+}
+
+.basicInfos .chatBox{
+    display: flex;
+    align-items: center;
+}
+
+.basicInfos .chatBox span{
+    margin: 0 3%;
+}
+
+.sendComment{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sendComment img{
+    width: 5%; 
+}
+
+.sendComment input{
+    width: 80%;
+    height: 100%;
+    padding-left: 2%;
+    border: none;
+    outline: none;
+}
+
+.sendComment button{
+    width: 10%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.sendComment button img{
+    width: 50%;
 }
