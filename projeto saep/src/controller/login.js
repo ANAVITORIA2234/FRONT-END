@@ -1,20 +1,28 @@
 const User = require('../models/User.js');
 
 const dataLogin = {
+
     login: async (req, res) => {
+
         const { usuario, password } = req.body;
+
         try {
+            // Criando o novo usuário
+
             if (!usuario || !password) {
-                return res.status(400).json({ message: "preencha os campos corretamente" });
+                return res.status(400).json({ message: "Preencha os campos corretamente" });
             }
+
             const verifyExist = await User.findOne({
                 where: {
                     usuario: usuario,
                 }
             })
+
             console.log(verifyExist)
 
             const exist = !!verifyExist
+
             if (!exist) {
 
                 await User.create({
@@ -27,20 +35,31 @@ const dataLogin = {
                         usuario: usuario,
                     }
                 })
-                return res.status(200).json({ message: "Usuário cadastrado com sucesso!", erro: false, usuario: usuario.usuario, logado: true, userID: getInfos.id })
+
+                res.status(200).json({ message: "Usuario cadastrado com sucesso", erro: false, usuario: usuario.usuario, logado:true, userId: getInfos.id})
 
                 return
             }
+
             if (verifyExist.password !== password) {
-                return res.status(401).json({ message: "Usuario ou senha incorretos" })
+                return res.status(401).json({ messsage: "Usuário ou senha incorretos" });
             }
-            // caso o usuario e a senha estejam corretos
-            return res.status(200).json({ message: "Login Autorizado com sucesso!", erro: false, usuario: usuario, usuario, userID: verifyExist.id, logado: true, })
+
+            // Caso o usuário e a senha estejam corretos
+            return res.status(200).json({
+                message: "Login autorizado",
+                erro: false,
+                usuario: usuario.usuario,
+                userId: verifyExist.id,
+                logado: true,
+            });
+
+
         } catch (error) {
-            console.error("erro ao cadrastrar usuario",
-                error);
+            console.error("Erro ao cadastrar usuário:", error);
             return res.status(500).json({
-                message: 'erro ao cadastrar usuario, ',
+                erro: true,
+                message: "Erro interno no servidor",
                 logado: false,
             });
         }
@@ -50,6 +69,3 @@ const dataLogin = {
 }
 
 module.exports = dataLogin;
-
-
-

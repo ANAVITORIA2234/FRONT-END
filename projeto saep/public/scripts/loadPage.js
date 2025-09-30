@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const URL = 'http://localhost:8080/api/imagens';
+    const URL = 'http://localhost:3306/api/imagens';
     const container = document.querySelectorAll('.item');
 
     fetch(URL, {
