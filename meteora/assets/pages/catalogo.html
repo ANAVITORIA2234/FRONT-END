@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALOGO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body style="background-color: rgb(250, 133, 0);">
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: rgba(224, 149, 36, 0.795);">
+            <div class="container">
+                 <!-- logo -->
+              <a class="navbar-brand" href="../index.html">DRINKS</a>
+               <!-- botao mobile -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="catalogo.html">Catalogo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../carrinho.html">Carrinho</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Perfil</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Procurar produto" aria-label="Search">
+                  <button class="btn btn-outline-dark" type="submit">Procurar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        
+        </header>
+
+<main>
+    <section id="botoesDrinks">
+        <h2>DRINKS DE A a Z</h2>
+        <button onclick="buscaAlfabetica('a')">A</button>
+        <button onclick="buscaAlfabetica('b')">B</button>
+        <button onclick="buscaAlfabetica('c')">C</button>
+        <button onclick="buscaAlfabetica('d')">D</button>
+        <button onclick="buscaAlfabetica('e')">E</button>
+        <button onclick="buscaAlfabetica('f')">F</button>
+        <button onclick="buscaAlfabetica('g')">G</button>
+        <button onclick="buscaAlfabetica('h')">H</button>
+        <button onclick="buscaAlfabetica('i')">I</button>
+        <button onclick="buscaAlfabetica('j')">J</button>
+        <button onclick="buscaAlfabetica('k')">K</button>
+        <button onclick="buscaAlfabetica('l')">L</button>
+        <button onclick="buscaAlfabetica('m')">M</button>
+        <button onclick="buscaAlfabetica('n')">N</button>
+        <button onclick="buscaAlfabetica('o')">O</button>
+        <button onclick="buscaAlfabetica('p')">P</button>
+        <button onclick="buscaAlfabetica('q')">Q</button>
+        <button onclick="buscaAlfabetica('r')">R</button>
+        <button onclick="buscaAlfabetica('s')">S</button>
+        <button onclick="buscaAlfabetica('t')">T</button>
+        <button onclick="buscaAlfabetica('u')">U</button>
+        <button onclick="buscaAlfabetica('v')">V</button>
+        <button onclick="buscaAlfabetica('w')">W</button>
+        <button onclick="buscaAlfabetica('x')">X</button>
+        <button onclick="buscaAlfabetica('y')">Y</button>
+        <button onclick="buscaAlfabetica('z')">Z</button>
+        <h2>DRINKS ALEATORIO</h2>
+        <button onclick="drinkAleatorio()">DRINK ALEATORIO</button>
+
+    </section>
+
+            <section id="pesquisarDrinks"></section>
+            <h2>PESQUISAR DRINK</h2>
+            <input type="text" id="pesquisar">
+            <button id="buscarBtn">BUSCAR</button>
+
+
+
+            <section id="resultados"></section>
+</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
+    <script src="../pegarDrinks.js"></script>
+    <script src=""></script>
+    <script src=""></script>
+
+</body>
+</html>
+
+
+
+
